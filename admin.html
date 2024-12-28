@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <style>
+        /* admin.css for Admin Management Page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Styling for the Admin Form */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+#booksContainer {
+    margin-top: 40px;
+}
+
+.bookCard {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.bookCard img {
+    width: 100%;
+    height: auto;
+}
+
+.bookCard button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.bookCard button:hover {
+    background-color: #e41e25;
+}
+
+#Error message {
+    display: none;
+    color: red;
+    text-align: center;
+}
+   
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Admin Page</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="books.html">Books</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Admin Book Management</h2>
+    <form id="addBookForm">
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" placeholder="Enter book title" required>
+        </div>
+        <div>
+            <label for="author">Author:</label>
+            <input type="text" id="author" placeholder="Enter book author" required>
+        </div>
+        <div>
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="fiction">Fiction</option>
+                <option value="comedy">Comedy</option>
+                <option value="technical">Technical</option>
+            </select>
+        </div>
+        <button type="submit">Add Book</button>
+    </form>
+
+    <div id="booksContainer">
+        <!-- Books will appear here -->
+    </div>
+</main>
+
+<script src="scripts/admin.js"></script>
+</body>
+</html>

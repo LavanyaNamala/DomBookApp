@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="styles/books.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* User Book Management Page Styling */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#booksContainer {
+    margin-top: 40px;
+}
+
+.bookCard {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.bookCard img {
+    width: 100%;
+    height: auto;
+}
+
+.bookCard button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.bookCard button:hover {
+    background-color: #007bb5;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>User Books</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="books.html">Books</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Manage Books</h2>
+    <button id="showAvailableBooksBtn">Show Available Books</button>
+    <button id="showBorrowedBooksBtn">Show Borrowed Books</button>
+
+    <div id="booksContainer">
+        <!-- Books will appear here -->
+    </div>
+</main>
+
+<script src="scripts/books.js"></script>
+</body>
+</html>
